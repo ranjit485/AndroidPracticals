@@ -1,42 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<TableRow>
-    <TextView
-        android:layout_height="wrap_content"
+
+    <TableLayout
         android:layout_width="wrap_content"
-        android:layout_margin="10dp"
-        android:textSize="30sp"
-        android:text="Roll No">
-    </TextView>
-    <TextView
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_margin="10dp"
-        android:textSize="30dp"
-        android:text="Name">
-    </TextView>
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_margin="10dp"
-        android:textSize="30dp"
-        android:text="Class">
-    </TextView>
-</TableRow>
-    <TableRow>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="12sp"
-            android:text="Name">
-        </TextView>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="12sp"
-            android:text="Name">
-        </TextView>
-    </TableRow>
-</TableLayout>
+        android:id="@+id/table">
+        <TableRow>
+            <TextView
+                android:text="Name">
+            </TextView>
+            <TextView
+                android:padding="10dp"
+                android:text="Age">
+            </TextView>
+            <TextView
+                android:padding="10dp"
+                android:text="Roll No">
+            </TextView>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
