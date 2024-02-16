@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="39dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+package com.example.practicalmad;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.pr_6_e2);
+
+        LinearLayout layout = findViewById(R.id.layout);
+        String[] students = {"Integer", "Character",
+                "Boolean","Reference","Pointer",
+                "Function","Array","Enumeration","Union"
+                ,"Structure","Class"
+        };
+
+        for (String x : students) {
+            TextView tv = new TextView(this);
+            tv.setText(x);
+            tv.setTextSize(30);
+            tv.setPadding(10, 10, 10, 10);
+            layout.addView(tv);
+
+        }
+    }
+}

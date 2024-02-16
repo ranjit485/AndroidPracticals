@@ -1,0 +1,66 @@
+package com.example.practicalmad;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.pr_6_e_1);
+
+            TableLayout table = findViewById(R.id.table);
+
+            String[][] students = {
+                    {"Ranjit", "21", "1"}, {"Raj", "21", "2"},
+                    {"Bhaskar", "21", "3"}, {"Jahir", "21", "4"},
+                    {"Shreedhar", "18", "5"}, {"Vivek", "21", "6"},
+                    {"Sapna", "19", "7"}, {"Samrudhi", "21", "8"},
+                    {"Rohan", "18", "9"}, {"Shreya", "21", "10"}
+            };
+
+            for (String[] data : students) {
+                TableRow rows = new TableRow(this);
+
+                for (String x : data) {
+                    TextView tv = new TextView(this);
+                    tv.setText(x);
+                    tv.setPadding(10, 10, 10, 10);
+                    rows.addView(tv);
+                }
+
+                table.addView(rows);
+            }
+
+    }
+}
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/table">
+        <TableRow>
+            <TextView
+                android:text="Name">
+            </TextView>
+            <TextView
+                android:padding="10dp"
+                android:text="Age">
+            </TextView>
+            <TextView
+                android:padding="10dp"
+                android:text="Roll No">
+            </TextView>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

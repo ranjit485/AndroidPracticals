@@ -1,12 +1,15 @@
 package com.example.practicalmad;
 
+import android.app.Activity;
+import android.content.Context;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-public class table extends MainActivity {
-    table() {
-        TableLayout table = findViewById(R.id.table);
+
+public class table {
+   table(Activity activity) {
+        TableLayout table = activity.findViewById(R.id.table);
 
         String[][] students = {
                 {"Ranjit", "21", "1"}, {"Raj", "21", "2"},
@@ -17,14 +20,14 @@ public class table extends MainActivity {
         };
 
         for (String[] data : students) {
-            TableRow rows = new TableRow(this);
+            TableRow rows = new TableRow(activity.getApplicationContext());
             rows.setLayoutParams(new TableLayout.LayoutParams(
                     TableLayout.LayoutParams.MATCH_PARENT,
                     TableLayout.LayoutParams.WRAP_CONTENT
             ));
 
             for (String x : data) {
-                TextView tv = new TextView(this);
+                TextView tv = new TextView(activity.getApplicationContext());
                 tv.setText(x);
                 tv.setPadding(10, 10, 10, 10);
                 rows.addView(tv);
