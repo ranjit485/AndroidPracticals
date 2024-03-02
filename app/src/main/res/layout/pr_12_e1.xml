@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioButton android:id="@+id/radioButton1_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Option 1"
+        android:layout_marginTop="16dp"/>
+
+    <RadioButton android:id="@+id/radioButton1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Option 2"
+        android:layout_below="@id/radioButton1_1"
+        android:layout_marginTop="16dp"/>
+
+    <RadioGroup android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioButton1_2"
+        android:layout_marginTop="16dp">
+
+        <RadioButton android:id="@+id/radioButton2_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 3"
+            android:layout_marginTop="16dp"/>
+
+        <RadioButton android:id="@+id/radioButton2_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 4"
+            android:layout_below="@id/radioButton2_1"
+            android:layout_marginTop="16dp"/>
+    </RadioGroup>
+
+    <Button android:id="@+id/buttonShowSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Selection"
+        android:layout_below="@id/radioGroup2"
+        android:layout_marginTop="16dp"
+        android:onClick="showSelection"/>
+</RelativeLayout>
